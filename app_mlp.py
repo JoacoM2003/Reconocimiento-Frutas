@@ -13,7 +13,7 @@ modelo_path = "modelo_frutas_mlp.h5"
 model = load_model(modelo_path)
 
 # Definir las clases manualmente
-class_names = ["Apple", "Banana", "Orange"]
+class_names = ["Manzana", "Banana", "Limón", "Naranja", "Pera", "Frutilla", "Tomate"]
 
 # Interfaz de Streamlit
 st.title("Clasificador de Frutas (Red MLP)")
@@ -26,12 +26,15 @@ if uploaded_file is not None:
     img = Image.open(uploaded_file)
     st.image(img, caption='Imagen cargada', use_column_width=True)
 
-    # Preprocesar la imagen
+    # Convertir a RGB para evitar problema de 4 canales
+    img = img.convert("RGB")
+
+    # Preprocesamiento
     img = img.resize((100, 100))
     img_array = image.img_to_array(img) / 255.0
     img_array = np.expand_dims(img_array, axis=0)
 
-    # Hacer la predicción
+    # Predicción
     prediction = model.predict(img_array)
     predicted_class = class_names[np.argmax(prediction)]
 

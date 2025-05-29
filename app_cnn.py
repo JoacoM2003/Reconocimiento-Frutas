@@ -12,7 +12,7 @@ modelo_path = "modelo_frutas_cnn.h5"
 # Cargar modelo desde la variable correcta
 model = load_model(modelo_path)
 
-class_names = ["Apple", "Banana", "Orange"]
+dclass_names = ["Manzana", "Banana", "Limón", "Naranja", "Pera", "Frutilla", "Tomate"]
 
 # Interfaz Streamlit
 st.title("Clasificador de Frutas (CNN)")
@@ -24,6 +24,9 @@ if uploaded_file is not None:
     # Mostrar imagen
     img = Image.open(uploaded_file)
     st.image(img, caption='Imagen cargada', use_column_width=True)
+
+    # Convertir a RGB para evitar problema de 4 canales
+    img = img.convert("RGB")
 
     # Preprocesamiento
     img = img.resize((100, 100))

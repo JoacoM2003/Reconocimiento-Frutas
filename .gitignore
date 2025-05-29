@@ -1,4 +1,3 @@
 venv
-/frutas
 modelo_frutas_cnn.h5
 modelo_frutas_mlp.h5
