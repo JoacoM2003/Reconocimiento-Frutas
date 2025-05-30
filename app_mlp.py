@@ -13,7 +13,7 @@ modelo_path = "modelo_frutas_mlp.h5"
 model = load_model(modelo_path)
 
 # Definir las clases manualmente
-class_names = ["Manzana", "Banana", "Limón", "Naranja", "Pera", "Frutilla", "Tomate"]
+class_names = ["Manzana", "Banana", "Limón", "Naranja", "Pera", "Tomate"]
 
 # Interfaz de Streamlit
 st.title("Clasificador de Frutas (Red MLP)")

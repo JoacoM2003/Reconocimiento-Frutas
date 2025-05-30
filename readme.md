@@ -10,4 +10,4 @@
 - Ejecutarlo en local: streamlit run app_cnn.py
 #### Un modelo tradicional:
 - Entrenar el modelo: Ejecutar archivo entrenar_modelo_mlp.py
-- Ejecutarlo en local --> streamlit run app_dense.py
+- Ejecutarlo en local --> streamlit run app_mlp.py
