@@ -12,7 +12,7 @@ modelo_path = "modelo_frutas_cnn.h5"
 # Cargar modelo desde la variable correcta
 model = load_model(modelo_path)
 
-dclass_names = ["Manzana", "Banana", "Limón", "Naranja", "Pera", "Frutilla", "Tomate"]
+class_names = ["Manzana", "Banana", "Naranja"]
 
 # Interfaz Streamlit
 st.title("Clasificador de Frutas (CNN)")
