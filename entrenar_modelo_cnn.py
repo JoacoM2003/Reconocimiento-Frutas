@@ -8,7 +8,7 @@ test_path = 'frutas/Test'
 img_size = (100, 100)
 batch_size = 32
 
-train_gen = ImageDataGenerator(rescale=1./255)  
+train_gen = ImageDataGenerator(rescale=1./255)   
 test_gen = ImageDataGenerator(rescale=1./255)
 
 train_data = train_gen.flow_from_directory(
